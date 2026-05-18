@@ -6,8 +6,8 @@ import liveaboard from "@/assets/liveaboard.jpg";
 export const Route = createFileRoute("/registrasi-lob")({
   head: () => ({
     meta: [
-      { title: "Registrasi Liveaboard (LOB) — Pulau Hatta" },
-      { name: "description", content: "Tata tertib sandar, perlindungan terumbu karang, dan retribusi desa wisata untuk kapal liveaboard di Pulau Hatta." },
+      { title: "Registrasi Live on Board (LOB) — Pulau Hatta" },
+      { name: "description", content: "Tata tertib sandar, perlindungan terumbu karang, dan retribusi desa wisata untuk kapal live on board di Pulau Hatta." },
       { property: "og:image", content: liveaboard },
     ],
   }),
@@ -44,13 +44,13 @@ function Page() {
   return (
     <>
       <section className="relative overflow-hidden text-background">
-        <img src={liveaboard} alt="Kapal liveaboard berlabuh di Banda" width={1280} height={896} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={liveaboard} alt="Kapal live on board berlabuh di Banda" width={1280} height={896} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28">
-          <span className="text-xs uppercase tracking-[0.2em] opacity-80">Liveaboard</span>
+          <span className="text-xs uppercase tracking-[0.2em] opacity-80">Live on Board</span>
           <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl">Registrasi & Informasi LOB</h1>
           <p className="mt-5 max-w-2xl text-background/90">
-            Setiap kapal liveaboard yang singgah ke Pulau Hatta wajib mengikuti
+            Setiap kapal live on board yang singgah ke Pulau Hatta wajib mengikuti
             tata tertib desa untuk menjaga kelestarian terumbu karang dan
             keberlangsungan wisata bagi generasi berikutnya.
           </p>

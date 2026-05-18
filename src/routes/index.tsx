@@ -136,7 +136,7 @@ function Home() {
               to="/registrasi-lob"
               img={liveaboard}
               icon={<Ship className="w-5 h-5" />}
-              eyebrow="Liveaboard"
+              eyebrow="Live on Board"
               title="Registrasi sandar LOB"
               desc="Tata tertib berlabuh, perlindungan karang, dan informasi retribusi desa wisata."
             />

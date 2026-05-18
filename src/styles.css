@@ -96,3 +96,12 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* Custom Gradients */
+.bg-gradient-ocean {
+  background-image: var(--gradient-ocean);
+}
+
+.bg-gradient-sunset {
+  background-image: var(--gradient-sunset);
+}

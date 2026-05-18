@@ -70,7 +70,7 @@ function Page() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-3xl bg-[var(--gradient-ocean)] text-primary-foreground p-10 lg:p-14">
+        <div className="mt-14 rounded-3xl bg-gradient-ocean text-primary-foreground p-10 lg:p-14 shadow-[var(--shadow-glow)]">
           <div className="grid lg:grid-cols-[1.5fr_auto] gap-8 items-center">
             <div>
               <h2 className="font-display text-3xl lg:text-4xl">Daftarkan kedatangan kapal Anda</h2>

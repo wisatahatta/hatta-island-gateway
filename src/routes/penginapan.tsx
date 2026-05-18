@@ -49,11 +49,21 @@ const facilityIcon = (f: string) => {
 function Page() {
   return (
     <>
-      <section className="bg-[var(--gradient-ocean)] text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24">
-          <span className="text-xs uppercase tracking-[0.2em] opacity-80">Akomodasi</span>
-          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl">Penginapan & Homestay</h1>
-          <p className="mt-5 max-w-2xl text-primary-foreground/85">
+      <section className="relative text-primary-foreground overflow-hidden">
+        {/* Background Image with Dark Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImg}
+            alt="Pemandangan Pulau Hatta"
+            className="w-full h-full object-cover animate-fade-in"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/45" />
+        </div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28">
+          <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Akomodasi</span>
+          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl font-bold leading-tight">Penginapan & Homestay</h1>
+          <p className="mt-5 max-w-2xl text-primary-foreground/85 text-base md:text-lg leading-relaxed">
             Semua penginapan dikelola langsung oleh keluarga di Desa Rozengain.
             Ketersediaan kamar dapat berubah — silakan konfirmasi melalui
             WhatsApp untuk informasi terkini.
@@ -83,7 +93,7 @@ function Page() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl bg-[var(--gradient-ocean)] text-primary-foreground p-10 lg:p-14 text-center">
+        <div className="mt-16 rounded-3xl bg-gradient-ocean text-primary-foreground p-10 lg:p-14 text-center shadow-[var(--shadow-glow)]">
           <h2 className="font-display text-3xl lg:text-4xl">Siap memesan penginapan?</h2>
           <p className="mt-3 max-w-xl mx-auto text-primary-foreground/85">
             Hubungi pengelola Desa Rozengain langsung melalui WhatsApp untuk

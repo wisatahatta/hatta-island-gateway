@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
-import { Waves, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImg from "../assets/logo.jpg";
 
 const nav = [
   { to: "/", label: "Beranda" },
@@ -17,10 +18,12 @@ export function SiteLayout() {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
-            <span className="grid place-items-center w-9 h-9 rounded-full bg-[var(--gradient-ocean)] text-primary-foreground">
-              <Waves className="w-4 h-4" />
-            </span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src={logoImg}
+              alt="Logo Desa Rozengain"
+              className="w-10 h-10 rounded-full object-cover border border-border/50 shadow-sm group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="leading-tight">
               <div className="font-display text-lg font-semibold">Pulau Hatta</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Desa Rozengain</div>
@@ -78,8 +81,18 @@ export function SiteLayout() {
 
       <footer className="border-t border-border bg-secondary/40 mt-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-10 grid md:grid-cols-3 gap-8 text-sm">
-          <div>
-            <div className="font-display text-xl mb-2">Pulau Hatta</div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <img
+                src={logoImg}
+                alt="Logo Desa Rozengain"
+                className="w-12 h-12 rounded-full object-cover border border-border/50 shadow-sm"
+              />
+              <div className="leading-tight">
+                <div className="font-display text-lg font-semibold">Pulau Hatta</div>
+                <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Desa Rozengain</div>
+              </div>
+            </div>
             <p className="text-muted-foreground">
               Desa Rozengain — Banda Naira, Maluku Tengah. Jejak sejarah, surga
               bawah laut, dan rumah sang rempah.

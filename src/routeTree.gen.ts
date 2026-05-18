@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RegistrasiLobRouteImport } from './routes/registrasi-lob'
+import { Route as ProdukLokalRouteImport } from './routes/produk-lokal'
+import { Route as PenginapanRouteImport } from './routes/penginapan'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RegistrasiLobRoute = RegistrasiLobRouteImport.update({
+  id: '/registrasi-lob',
+  path: '/registrasi-lob',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdukLokalRoute = ProdukLokalRouteImport.update({
+  id: '/produk-lokal',
+  path: '/produk-lokal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PenginapanRoute = PenginapanRouteImport.update({
+  id: '/penginapan',
+  path: '/penginapan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/penginapan': typeof PenginapanRoute
+  '/produk-lokal': typeof ProdukLokalRoute
+  '/registrasi-lob': typeof RegistrasiLobRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/penginapan': typeof PenginapanRoute
+  '/produk-lokal': typeof ProdukLokalRoute
+  '/registrasi-lob': typeof RegistrasiLobRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/penginapan': typeof PenginapanRoute
+  '/produk-lokal': typeof ProdukLokalRoute
+  '/registrasi-lob': typeof RegistrasiLobRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
+  id: '__root__' | '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PenginapanRoute: typeof PenginapanRoute
+  ProdukLokalRoute: typeof ProdukLokalRoute
+  RegistrasiLobRoute: typeof RegistrasiLobRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/registrasi-lob': {
+      id: '/registrasi-lob'
+      path: '/registrasi-lob'
+      fullPath: '/registrasi-lob'
+      preLoaderRoute: typeof RegistrasiLobRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produk-lokal': {
+      id: '/produk-lokal'
+      path: '/produk-lokal'
+      fullPath: '/produk-lokal'
+      preLoaderRoute: typeof ProdukLokalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/penginapan': {
+      id: '/penginapan'
+      path: '/penginapan'
+      fullPath: '/penginapan'
+      preLoaderRoute: typeof PenginapanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +104,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PenginapanRoute: PenginapanRoute,
+  ProdukLokalRoute: ProdukLokalRoute,
+  RegistrasiLobRoute: RegistrasiLobRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

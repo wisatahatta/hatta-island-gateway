@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RegistrasiLobRouteImport } from './routes/registrasi-lob'
 import { Route as ProdukLokalRouteImport } from './routes/produk-lokal'
 import { Route as PenginapanRouteImport } from './routes/penginapan'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RegistrasiLobRoute = RegistrasiLobRouteImport.update({
   id: '/registrasi-lob',
   path: '/registrasi-lob',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,25 @@ export interface FileRoutesById {
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
+  fullPaths:
+    | '/'
+    | '/penginapan'
+    | '/produk-lokal'
+    | '/registrasi-lob'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
-  id: '__root__' | '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob'
+  to: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob' | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/penginapan'
+    | '/produk-lokal'
+    | '/registrasi-lob'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +87,18 @@ export interface RootRouteChildren {
   PenginapanRoute: typeof PenginapanRoute
   ProdukLokalRoute: typeof ProdukLokalRoute
   RegistrasiLobRoute: typeof RegistrasiLobRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/registrasi-lob': {
       id: '/registrasi-lob'
       path: '/registrasi-lob'
@@ -107,6 +135,7 @@ const rootRouteChildren: RootRouteChildren = {
   PenginapanRoute: PenginapanRoute,
   ProdukLokalRoute: ProdukLokalRoute,
   RegistrasiLobRoute: RegistrasiLobRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

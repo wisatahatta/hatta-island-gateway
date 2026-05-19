@@ -10,6 +10,7 @@ import {
 
 import { SiteLayout } from "@/components/SiteLayout";
 import appCss from "../styles.css?url";
+import logoImg from "../assets/logo.jpg";
 
 function NotFoundComponent() {
   return (
@@ -81,6 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "icon", href: logoImg },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },

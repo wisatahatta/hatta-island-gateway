@@ -5,6 +5,7 @@ import underwater from "@/assets/underwater.jpg";
 import nutmeg from "@/assets/nutmeg.jpg";
 import homestay from "@/assets/homestay.jpg";
 import liveaboard from "@/assets/liveaboard.jpg";
+import fuli from "@/assets/fuli.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,15 +123,15 @@ function Home() {
               icon={<Compass className="w-5 h-5" />}
               eyebrow="Penginapan"
               title="Tinggal di rumah warga"
-              desc="Homestay kayu yang menghadap laut, makan tiga kali sehari, dan keramahan khas Banda."
+              desc="Homestay nyaman yang menghadap laut dan keramahan khas penduduk Pulau Hatta."
             />
             <HighlightCard
               to="/produk-lokal"
-              img={nutmeg}
+              img={fuli}
               icon={<Leaf className="w-5 h-5" />}
               eyebrow="Produk Lokal"
-              title="Pala, fuli, dan hasil laut"
-              desc="Rempah unggulan, ikan asap, dan kerajinan tangan langsung dari produsen desa."
+              title="Pala, fuli, dan manisan pala"
+              desc="Rempah unggulan dan manisan pala khas langsung dari Desa Rozengain."
             />
             <HighlightCard
               to="/registrasi-lob"

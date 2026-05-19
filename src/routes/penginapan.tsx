@@ -3,6 +3,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BedDouble, Utensils, Wind, Bath } from "lucide-react";
 import homestay from "@/assets/homestay.jpg";
 import heroImg from "@/assets/hero-hatta.jpg";
+import tiara from "@/assets/tiara.jpg";
+import bakarei from "@/assets/bakarei.jpg";
+import terapung from "@/assets/terapung.jpg";
 
 export const Route = createFileRoute("/penginapan")({
   head: () => ({
@@ -20,22 +23,22 @@ const WA_MSG =
 
 const homestays = [
   {
-    name: "Homestay Rozengain Bahari",
-    desc: "Bangunan kayu dua kamar tepat di pinggir pantai pasir putih. Cocok untuk pasangan atau keluarga kecil.",
-    img: homestay,
+    name: "Penginapan Tiara",
+    desc: "Homestay nyaman di pinggir pantai pasir putih dengan pemandangan langsung ke perairan laut lepas yang biru.",
+    img: tiara,
     fasilitas: ["Kipas angin", "Kamar mandi dalam", "Termasuk makan 3x", "View laut"],
   },
   {
-    name: "Homestay Pala Banda",
-    desc: "Rumah warga di tengah kebun pala. Sarapan dengan kopi rempah dan ikan segar setiap pagi.",
-    img: heroImg,
+    name: "Penginapan Bakarei",
+    desc: "Akomodasi sejuk dan asri di tengah perkebunan pala bersejarah Desa Rozengain, menghadirkan kedamaian alami.",
+    img: bakarei,
     fasilitas: ["AC", "Kamar mandi dalam", "Termasuk makan 3x", "Wi-Fi terbatas"],
   },
   {
-    name: "Homestay Mata Air",
-    desc: "Akomodasi sederhana dengan teras luas, dekat dengan dermaga utama dan titik snorkeling.",
-    img: homestay,
-    fasilitas: ["Kipas angin", "Kamar mandi dalam", "Termasuk makan 3x", "Antar-jemput dermaga"],
+    name: "Penginapan Terapung",
+    desc: "Pengalaman unik menginap langsung di atas permukaan air laut kristal Pulau Hatta dengan akses snorkeling langsung dari teras kamar.",
+    img: terapung,
+    fasilitas: ["Termasuk makan 3x", "Kamar mandi dalam", "Antar-jemput dermaga", "Akses langsung laut"],
   },
 ];
 
@@ -59,7 +62,7 @@ function Page() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/45" />
         </div>
-        
+
         <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28">
           <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Akomodasi</span>
           <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl font-bold leading-tight">Penginapan & Homestay</h1>
@@ -82,11 +85,11 @@ function Page() {
                 <h2 className="font-display text-2xl">{h.name}</h2>
                 <p className="mt-2 text-sm text-muted-foreground flex-1">{h.desc}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
-                  {h.fasilitas.map((f) => (
+                  {/* {h.fasilitas.map((f) => (
                     <li key={f} className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary text-xs text-secondary-foreground">
                       {facilityIcon(f)} {f}
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               </div>
             </article>

@@ -21,7 +21,7 @@ const rules = [
   {
     icon: <Anchor className="w-5 h-5" />,
     title: "Tata tertib sandar",
-    body: "Kapal wajib berlabuh pada area mooring buoy yang telah ditentukan. Dilarang melego jangkar di atas terumbu karang.",
+    body: "Kapal wajib berlabuh pada area yang telah ditentukan. Dilarang menaruh jangkar di atas terumbu karang.",
   },
   {
     icon: <Fish className="w-5 h-5" />,
@@ -31,12 +31,12 @@ const rules = [
   {
     icon: <HandCoins className="w-5 h-5" />,
     title: "Retribusi desa wisata",
-    body: "Setiap kapal LOB dikenakan kontribusi yang seluruhnya digunakan untuk perawatan mooring, konservasi karang, dan kas desa.",
+    body: "Setiap kapal LOB dikenakan kontribusi yang seluruhnya digunakan untuk perawatan lingkungan dan kebutuhan desa.",
   },
   {
     icon: <ShieldCheck className="w-5 h-5" />,
     title: "Wajib lapor kedatangan",
-    body: "Lapor kepada Syahbandar desa / pengelola minimal 24 jam sebelum kedatangan untuk koordinasi sandar dan kegiatan tamu.",
+    body: "Lapor kepada pengelola desa untuk koordinasi sandar dan kegiatan tamu.",
   },
 ];
 

@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { useState } from "react";
 import logoImg from "../assets/logo.jpg";
 
@@ -37,9 +37,8 @@ export function SiteLayout() {
                 <Link
                   key={n.to}
                   to={n.to}
-                  className={`px-3 py-2 text-sm rounded-md transition-colors ${
-                    active ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`px-3 py-2 text-sm rounded-md transition-colors ${active ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {n.label}
                 </Link>
@@ -63,9 +62,8 @@ export function SiteLayout() {
                   key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className={`py-2 text-sm ${
-                    pathname === n.to ? "text-primary font-semibold" : "text-foreground"
-                  }`}
+                  className={`py-2 text-sm ${pathname === n.to ? "text-primary font-semibold" : "text-foreground"
+                    }`}
                 >
                   {n.label}
                 </Link>
@@ -112,14 +110,35 @@ export function SiteLayout() {
           </div>
           <div>
             <div className="font-semibold mb-3">Kontak</div>
-            <p className="text-muted-foreground">
+            {/* <p className="text-muted-foreground mb-4">
               WhatsApp resmi pengelola desa wisata tersedia melalui tombol
               pemesanan pada setiap halaman.
-            </p>
+            </p> */}
+            <a
+              href="https://www.instagram.com/rozengainpulauhatta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>@rozengainpulauhatta</span>
+            </a>
           </div>
         </div>
-        <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Desa Wisata Rozengain — Pulau Hatta. Semua hak dilindungi.
+        <div className="border-t border-border py-6 text-center text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-center gap-2">
+          <span>© {new Date().getFullYear()} Desa Wisata Rozengain — Pulau Hatta. Semua hak dilindungi.</span>
+          <span className="hidden sm:inline opacity-50">·</span>
+          <span>
+            Didukung oleh{" "}
+            <a
+              href="https://www.instagram.com/inspire.ind/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground hover:text-primary transition-colors"
+            >
+              @inspire.ind
+            </a>
+          </span>
         </div>
       </footer>
     </div>

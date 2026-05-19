@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import nutmeg from "@/assets/nutmeg.jpg";
-import fish from "@/assets/fish.jpg";
-import crafts from "@/assets/crafts.jpg";
+import fuli from "@/assets/fuli.jpg";
+import manisan from "@/assets/manisan.jpg";
 
 export const Route = createFileRoute("/produk-lokal")({
   head: () => ({
     meta: [
       { title: "Produk Lokal & Hasil Bumi — Pulau Hatta" },
-      { name: "description", content: "Biji pala, fuli, ikan asap, dan kerajinan tangan asli Desa Rozengain — langsung dari produsen ke pembeli." },
+      { name: "description", content: "Biji pala, fuli, dan manisan pala khas Desa Rozengain — langsung dari produsen ke pembeli." },
       { property: "og:image", content: nutmeg },
     ],
   }),
@@ -19,20 +19,29 @@ const WA_MSG =
   "Halo, saya tertarik untuk membeli produk lokal dari Pulau Hatta (Desa Rozengain). Mohon informasi ketersediaan dan harga.";
 
 const products = [
-  { name: "Biji Pala Pilihan", desc: "Pala kering kualitas ekspor dari kebun warisan keluarga di Rozengain.", img: nutmeg, tag: "Rempah" },
-  { name: "Fuli / Bunga Pala", desc: "Selubung merah pala yang langka, harum, dan kaya cita rasa.", img: nutmeg, tag: "Rempah" },
-  { name: "Ikan Asap Tradisional", desc: "Ikan tongkol dan cakalang yang diasapi dengan cara tradisional Banda.", img: fish, tag: "Hasil Laut" },
-  { name: "Kerajinan Anyaman", desc: "Tas dan tikar serat alam buatan ibu-ibu desa.", img: crafts, tag: "Kerajinan" },
+  { name: "Biji Pala Pilihan", desc: "Pala kering kualitas export dari kebun warisan keluarga di Rozengain.", img: nutmeg, tag: "Rempah" },
+  { name: "Fuli / Bunga Pala", desc: "Selubung merah pala yang langka, harum, dan kaya cita rasa.", img: fuli, tag: "Rempah" },
+  { name: "Manisan Pala", desc: "Manisan tradisional dari daging buah pala segar, menawarkan perpaduan rasa manis dan hangat khas Banda.", img: manisan, tag: "Oleh-oleh" },
 ];
 
 function Page() {
   return (
     <>
-      <section className="bg-spice text-spice-foreground">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24">
-          <span className="text-xs uppercase tracking-[0.2em] opacity-80">Hasil Bumi</span>
-          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl">Produk Lokal & Hasil Bumi</h1>
-          <p className="mt-5 max-w-2xl text-spice-foreground/90">
+      <section className="relative text-primary-foreground overflow-hidden">
+        {/* Background Image with Dark Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={manisan}
+            alt="Manisan buah pala segar khas Pulau Hatta"
+            className="w-full h-full object-cover animate-fade-in"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/45" />
+        </div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28">
+          <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Hasil Bumi</span>
+          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl font-bold leading-tight">Produk Lokal & Hasil Bumi</h1>
+          <p className="mt-5 max-w-2xl text-primary-foreground/85 text-base md:text-lg leading-relaxed">
             Pala dan fuli Banda telah mengubah jalan sejarah dunia. Kini, hasil
             bumi Rozengain dapat Anda bawa pulang langsung dari produsennya.
           </p>
@@ -40,7 +49,7 @@ function Page() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-20">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (
             <article key={p.name} className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-[var(--shadow-glow)] transition-all duration-500">
               <div className="aspect-square overflow-hidden">

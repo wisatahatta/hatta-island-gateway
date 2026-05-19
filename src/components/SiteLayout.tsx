@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X, Instagram, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import logoImg from "../assets/logo.jpg";
 
@@ -108,17 +108,22 @@ export function SiteLayout() {
               ))}
             </ul>
           </div>
-          <div>
-            <div className="font-semibold mb-3">Kontak</div>
-            {/* <p className="text-muted-foreground mb-4">
-              WhatsApp resmi pengelola desa wisata tersedia melalui tombol
-              pemesanan pada setiap halaman.
-            </p> */}
+          <div className="flex flex-col gap-2.5">
+            <div className="font-semibold mb-1">Kontak</div>
+            <a
+              href="https://wa.me/6281240881479"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-fit"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>+62 812-4088-1479</span>
+            </a>
             <a
               href="https://www.instagram.com/rozengainpulauhatta/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-fit"
             >
               <Instagram className="w-4 h-4" />
               <span>@rozengainpulauhatta</span>

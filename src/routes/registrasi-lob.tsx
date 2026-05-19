@@ -80,12 +80,21 @@ function Page() {
                 dan rencana aktivitas selama di Pulau Hatta.
               </p>
             </div>
-            <WhatsAppButton message={WA_MSG} label="Registrasi Kapal via WhatsApp" />
+            <WhatsAppButton
+              phoneNumber="6281240881479"
+              message={WA_MSG}
+              label="Registrasi Kapal via WhatsApp"
+            />
           </div>
         </div>
       </section>
 
-      <WhatsAppButton variant="floating" message={WA_MSG} label="WhatsApp" />
+      <WhatsAppButton
+        phoneNumber="6281240881479"
+        variant="floating"
+        message={WA_MSG}
+        label="WhatsApp"
+      />
     </>
   );
 }

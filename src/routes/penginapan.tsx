@@ -103,12 +103,21 @@ function Page() {
             konfirmasi tanggal, jumlah tamu, dan harga.
           </p>
           <div className="mt-7 flex justify-center">
-            <WhatsAppButton message={WA_MSG} label="Pesan Penginapan via WhatsApp" />
+            <WhatsAppButton
+              phoneNumber="6285243909392"
+              message={WA_MSG}
+              label="Pesan Penginapan via WhatsApp"
+            />
           </div>
         </div>
       </section>
 
-      <WhatsAppButton variant="floating" message={WA_MSG} label="WhatsApp" />
+      <WhatsAppButton
+        phoneNumber="6285243909392"
+        variant="floating"
+        message={WA_MSG}
+        label="WhatsApp"
+      />
     </>
   );
 }

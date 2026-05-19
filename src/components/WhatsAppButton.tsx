@@ -3,18 +3,25 @@ import { MessageCircle } from "lucide-react";
 // TODO: ganti dengan nomor WhatsApp resmi pengelola desa (format internasional tanpa +)
 const WA_NUMBER = "6281234567890";
 
-export function buildWaLink(message: string) {
-  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+export function buildWaLink(message: string, phoneNumber?: string) {
+  return `https://wa.me/${phoneNumber || WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 interface Props {
+  phoneNumber?: string;
   message: string;
   label: string;
   variant?: "solid" | "floating" | "outline";
   className?: string;
 }
 
-export function WhatsAppButton({ message, label, variant = "solid", className = "" }: Props) {
+export function WhatsAppButton({
+  phoneNumber,
+  message,
+  label,
+  variant = "solid",
+  className = "",
+}: Props) {
   const base =
     "inline-flex items-center justify-center gap-2.5 font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
@@ -27,7 +34,7 @@ export function WhatsAppButton({ message, label, variant = "solid", className = 
 
   return (
     <a
-      href={buildWaLink(message)}
+      href={buildWaLink(message, phoneNumber)}
       target="_blank"
       rel="noopener noreferrer"
       className={`${base} ${styles} ${className}`}

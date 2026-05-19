@@ -144,6 +144,76 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* MAP SECTION */}
+      <section className="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-28 border-t border-border/50">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-5">
+            <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+              Peta & Lokasi
+            </span>
+            <h2 className="mt-3 font-display text-4xl lg:text-5xl leading-tight">
+              Menuju Surga yang Tersembunyi
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              Pulau Hatta (Desa Rozengain) terletak di ujung paling timur dari
+              Kepulauan Banda, Maluku Tengah. Letaknya yang terisolasi secara indah menjadikannya
+              salah satu destinasi selam dan relaksasi terbaik di dunia.
+            </p>
+            
+            <div className="mt-8 space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <Compass className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">Koordinat Geografis</h4>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    4°35'12"S 130°02'16"E — Kampoeng Rozengain, Pulau Hatta.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <Ship className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">Transportasi Laut</h4>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Dapat ditempuh menggunakan perahu cepat (speed boat) umum atau sewaan dari pelabuhan Banda Neira dalam waktu sekitar 45-60 menit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="https://maps.app.goo.gl/jfEh9t2i21EbFnpS7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors text-sm shadow-sm"
+              >
+                Buka di Google Maps
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="relative rounded-2xl overflow-hidden border border-border shadow-[var(--shadow-glow)] aspect-video lg:aspect-[4/3] w-full bg-muted">
+              <iframe
+                title="Peta Lokasi Pulau Hatta"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15908.162265975714!2d130.0273473!3d-4.5867419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d3e26cc9fe69bcb%3A0xeb7f7474d61744df!2sKampoeng%20Rozengain!5e0!3m2!1sen!2sid!4v1716110000000!5m2!1sen!2sid"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

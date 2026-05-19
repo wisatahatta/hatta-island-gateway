@@ -71,12 +71,21 @@ function Page() {
             dan pengiriman ke kota Anda.
           </p>
           <div className="mt-7 flex justify-center">
-            <WhatsAppButton message={WA_MSG} label="Pesan Produk via WhatsApp" />
+            <WhatsAppButton
+              phoneNumber="6282261420897"
+              message={WA_MSG}
+              label="Pesan Produk via WhatsApp"
+            />
           </div>
         </div>
       </section>
 
-      <WhatsAppButton variant="floating" message={WA_MSG} label="WhatsApp" />
+      <WhatsAppButton
+        phoneNumber="6282261420897"
+        variant="floating"
+        message={WA_MSG}
+        label="WhatsApp"
+      />
     </>
   );
 }

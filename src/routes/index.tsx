@@ -83,7 +83,7 @@ function Home() {
               turun-temurun, dan laut yang menjaga sejarah di setiap karangnya.
             </p>
             <div className="mt-7 grid grid-cols-3 gap-4 text-sm">
-              <Stat n="1936" l="Tahun pengasingan" />
+              <Stat n="1936-1942" l="Tahun pengasingan" />
               <Stat n="40+" l="Titik selam" />
               <Stat n="100%" l="Dikelola warga" />
             </div>
@@ -160,7 +160,7 @@ function Home() {
               Kepulauan Banda, Maluku Tengah. Letaknya yang terisolasi secara indah menjadikannya
               salah satu destinasi selam dan relaksasi terbaik di dunia.
             </p>
-            
+
             <div className="mt-8 space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">

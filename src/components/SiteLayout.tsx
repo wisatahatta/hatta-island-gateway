@@ -92,7 +92,7 @@ export function SiteLayout() {
               </div>
             </div>
             <p className="text-muted-foreground">
-              Desa Rozengain — Banda Naira, Maluku Tengah. Jejak sejarah, surga
+              Desa Rozengain — Banda Neira, Maluku Tengah. Jejak sejarah, surga
               bawah laut, dan rumah sang rempah.
             </p>
           </div>

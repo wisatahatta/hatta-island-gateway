@@ -10,7 +10,7 @@ import fuli from "@/assets/fuli.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pulau Hatta — Desa Wisata Rozengain, Banda Naira" },
+      { title: "Pulau Hatta — Desa Wisata Rozengain, Banda Neira" },
       {
         name: "description",
         content:
@@ -37,7 +37,7 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-foreground/10" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24 text-background">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background/15 backdrop-blur text-xs uppercase tracking-[0.2em]">
-            <Anchor className="w-3.5 h-3.5" /> Banda Naira · Maluku Tengah
+            <Anchor className="w-3.5 h-3.5" /> Banda Neira · Maluku Tengah
           </span>
           <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold max-w-4xl leading-[1.05]">
             Selamat datang di Pulau Hatta — Desa Rozengain.

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/penginapan", changefreq: "monthly", priority: "0.8" },
           { path: "/produk-lokal", changefreq: "monthly", priority: "0.8" },
           { path: "/registrasi-lob", changefreq: "monthly", priority: "0.7" },
+          { path: "/hatta-marine-program", changefreq: "monthly", priority: "0.8" },
         ];
 
         const urls = entries

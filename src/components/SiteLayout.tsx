@@ -8,6 +8,7 @@ const nav = [
   { to: "/penginapan", label: "Penginapan" },
   { to: "/produk-lokal", label: "Produk Lokal" },
   { to: "/registrasi-lob", label: "Registrasi LOB" },
+  { to: "/hatta-marine-program", label: "Hatta Marine Program" },
 ] as const;
 
 export function SiteLayout() {

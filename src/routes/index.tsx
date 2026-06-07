@@ -116,7 +116,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <HighlightCard
               to="/penginapan"
               img={homestay}
@@ -140,6 +140,14 @@ function Home() {
               eyebrow="Live on Board"
               title="Registrasi sandar LOB"
               desc="Tata tertib berlabuh, perlindungan karang, dan informasi retribusi desa wisata."
+            />
+            <HighlightCard
+              to="/hatta-marine-program"
+              img={underwater}
+              icon={<Anchor className="w-5 h-5" />}
+              eyebrow="Marine Program"
+              title="Konservasi & Edukasi Laut"
+              desc="Program eco-diving, edukasi sampah plastik, riset ilmiah, dan pelestarian terumbu karang."
             />
           </div>
         </div>
@@ -235,7 +243,7 @@ function HighlightCard({
   title,
   desc,
 }: {
-  to: "/penginapan" | "/produk-lokal" | "/registrasi-lob";
+  to: "/penginapan" | "/produk-lokal" | "/registrasi-lob" | "/hatta-marine-program";
   img: string;
   icon: React.ReactNode;
   eyebrow: string;

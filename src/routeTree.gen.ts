@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RegistrasiLobRouteImport } from './routes/registrasi-lob'
 import { Route as ProdukLokalRouteImport } from './routes/produk-lokal'
 import { Route as PenginapanRouteImport } from './routes/penginapan'
+import { Route as HattaMarineProgramRouteImport } from './routes/hatta-marine-program'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -35,6 +36,11 @@ const PenginapanRoute = PenginapanRouteImport.update({
   path: '/penginapan',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HattaMarineProgramRoute = HattaMarineProgramRouteImport.update({
+  id: '/hatta-marine-program',
+  path: '/hatta-marine-program',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/hatta-marine-program': typeof HattaMarineProgramRoute
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/hatta-marine-program': typeof HattaMarineProgramRoute
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/hatta-marine-program': typeof HattaMarineProgramRoute
   '/penginapan': typeof PenginapanRoute
   '/produk-lokal': typeof ProdukLokalRoute
   '/registrasi-lob': typeof RegistrasiLobRoute
@@ -67,15 +76,23 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/hatta-marine-program'
     | '/penginapan'
     | '/produk-lokal'
     | '/registrasi-lob'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/penginapan' | '/produk-lokal' | '/registrasi-lob' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/hatta-marine-program'
+    | '/penginapan'
+    | '/produk-lokal'
+    | '/registrasi-lob'
+    | '/sitemap.xml'
   id:
     | '__root__'
     | '/'
+    | '/hatta-marine-program'
     | '/penginapan'
     | '/produk-lokal'
     | '/registrasi-lob'
@@ -84,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HattaMarineProgramRoute: typeof HattaMarineProgramRoute
   PenginapanRoute: typeof PenginapanRoute
   ProdukLokalRoute: typeof ProdukLokalRoute
   RegistrasiLobRoute: typeof RegistrasiLobRoute
@@ -120,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PenginapanRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hatta-marine-program': {
+      id: '/hatta-marine-program'
+      path: '/hatta-marine-program'
+      fullPath: '/hatta-marine-program'
+      preLoaderRoute: typeof HattaMarineProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -132,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HattaMarineProgramRoute: HattaMarineProgramRoute,
   PenginapanRoute: PenginapanRoute,
   ProdukLokalRoute: ProdukLokalRoute,
   RegistrasiLobRoute: RegistrasiLobRoute,

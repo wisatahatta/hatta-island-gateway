@@ -199,7 +199,7 @@ function Page() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{act.desc}</p>
               </div>
             ))}
-            
+
             {/* Siapa yang bisa ikut card */}
             <div className="rounded-2xl bg-accent/10 border border-accent/20 p-7 flex flex-col justify-between">
               <div>
@@ -286,20 +286,7 @@ function Page() {
                   <Instagram className="w-4 h-4" />
                   <span>@hattamarineprogram</span>
                 </a>
-                <a
-                  href="mailto:info@luminocean.com"
-                  className="flex items-center gap-2 hover:underline"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>info@luminocean.com</span>
-                </a>
-                <a
-                  href="mailto:info@bandasea.org"
-                  className="flex items-center gap-2 hover:underline"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>info@bandasea.org</span>
-                </a>
+
               </div>
             </div>
             <div className="flex flex-col gap-3">

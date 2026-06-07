@@ -6,6 +6,7 @@ import nutmeg from "@/assets/nutmeg.jpg";
 import homestay from "@/assets/homestay.jpg";
 import liveaboard from "@/assets/liveaboard.jpg";
 import fuli from "@/assets/fuli.jpg";
+import kanariLogo from "@/assets/kanari-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,32 +36,52 @@ function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-foreground/10" />
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24 text-background">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background/15 backdrop-blur text-xs uppercase tracking-[0.2em]">
-            <Anchor className="w-3.5 h-3.5" /> Banda Neira · Maluku Tengah
-          </span>
-          <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold max-w-4xl leading-[1.05]">
-            Selamat datang di Pulau Hatta — Desa Rozengain.
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-background/85">
-            Jelajahi jejak sejarah pengasingan Bung Hatta, pesona bawah laut
-            Banda, dan surga rempah pala di salah satu sudut paling tenang di
-            Indonesia timur.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              to="/penginapan"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-background text-foreground font-medium hover:bg-accent transition-colors"
-            >
-              Pesan penginapan <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              to="/registrasi-lob"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-background/40 text-background hover:bg-background/10 transition-colors"
-            >
-              Registrasi LOB
-            </Link>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24 text-background w-full">
+          {/* Mobile Logo (Visible only on mobile/tablet) */}
+          <div className="md:hidden mb-6">
+            <img
+              src={kanariLogo}
+              alt="Logo Kelompok Ekowisata Rozengain KANARI"
+              className="w-24 h-24 rounded-full border-4 border-white/20 backdrop-blur shadow-[var(--shadow-glow)] object-contain bg-white pb-2"
+            />
           </div>
+
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background/15 backdrop-blur text-xs uppercase tracking-[0.2em]">
+              <Anchor className="w-3.5 h-3.5" /> Banda Neira · Maluku Tengah
+            </span>
+            <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05]">
+              Selamat datang di Pulau Hatta — Desa Rozengain.
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg text-background/85">
+              Jelajahi jejak sejarah pengasingan Bung Hatta, pesona bawah laut
+              Banda, dan surga rempah pala di salah satu sudut paling tenang di
+              Indonesia timur.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                to="/penginapan"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-background text-foreground font-medium hover:bg-accent transition-colors"
+              >
+                Pesan penginapan <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/registrasi-lob"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-background/40 text-background hover:bg-background/10 transition-colors"
+              >
+                Registrasi LOB
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Logo (Visible only on desktop, absolute positioned bottom-right) */}
+        <div className="absolute bottom-16 right-8 lg:right-16 z-10 hidden md:block">
+          <img
+            src={kanariLogo}
+            alt="Logo Kelompok Ekowisata Rozengain KANARI"
+            className="w-32 h-32 lg:w-40 lg:h-40 rounded-full border-4 border-white/20 backdrop-blur shadow-[var(--shadow-glow)] object-contain bg-white pb-2.5"
+          />
         </div>
       </section>
 
@@ -109,7 +130,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-24">
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Sorotan</span>
-            <h2 className="mt-3 font-display text-4xl lg:text-5xl">Tiga pintu untuk mengenal Pulau Hatta.</h2>
+            <h2 className="mt-3 font-display text-4xl lg:text-5xl">Empat pintu untuk mengenal Pulau Hatta.</h2>
             <p className="mt-4 text-muted-foreground">
               Semua layanan dikelola langsung oleh warga desa, dan pemesanan
               dilakukan melalui satu kanal WhatsApp resmi.

@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { Menu, X, Instagram, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/kanari-logo.png";
 
 const nav = [
   { to: "/", label: "Beranda" },

@@ -10,7 +10,7 @@ import {
 
 import { SiteLayout } from "@/components/SiteLayout";
 import appCss from "../styles.css?url";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/kanari-logo.png";
 
 function NotFoundComponent() {
   return (

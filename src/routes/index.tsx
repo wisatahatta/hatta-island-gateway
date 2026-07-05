@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Compass, Leaf, Ship, Anchor } from "lucide-react";
-import heroImg from "@/assets/hero-hatta.jpg";
-import underwater from "@/assets/underwater.jpg";
-import nutmeg from "@/assets/nutmeg.jpg";
-import homestay from "@/assets/homestay.jpg";
-import liveaboard from "@/assets/liveaboard.jpg";
-import fuli from "@/assets/fuli.jpg";
+import heroImg from "@/assets/hero-hatta.webp";
+import underwater from "@/assets/underwater.webp";
+import nutmeg from "@/assets/nutmeg.webp";
+import homestay from "@/assets/homestay.webp";
+import liveaboard from "@/assets/liveaboard.webp";
+import fuli from "@/assets/fuli.webp";
+import ekowisataLogo from "@/assets/ekowisata.webp";
+import nairadiveLogo from "@/assets/nairadive.webp";
+import inspireLogo from "@/assets/inspire.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,31 +39,61 @@ function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-foreground/10" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-24 text-background w-full">
-          <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background/15 backdrop-blur text-xs uppercase tracking-[0.2em]">
-              <Anchor className="w-3.5 h-3.5" /> Banda Neira · Maluku Tengah
-            </span>
-            <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05]">
-              Selamat datang di Pulau Hatta — Desa Rozengain.
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg text-background/85">
-              Jelajahi jejak sejarah pengasingan Bung Hatta, pesona bawah laut
-              Banda, dan surga rempah pala di salah satu sudut paling tenang di
-              Indonesia timur.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/penginapan"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-background text-foreground font-medium hover:bg-accent transition-colors"
-              >
-                Pesan penginapan <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/registrasi-lob"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-background/40 text-background hover:bg-background/10 transition-colors"
-              >
-                Registrasi LOB
-              </Link>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-12">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background/15 backdrop-blur text-xs uppercase tracking-[0.2em]">
+                <Anchor className="w-3.5 h-3.5" /> Banda Neira · Maluku Tengah
+              </span>
+              <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05]">
+                Selamat datang di Pulau Hatta — Desa Rozengain.
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg text-background/85">
+                Jelajahi jejak sejarah pengasingan Bung Hatta, pesona bawah laut Banda, dan surga
+                rempah pala di salah satu sudut paling tenang di Indonesia timur.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  to="/penginapan"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-background text-foreground font-medium hover:bg-accent transition-colors"
+                >
+                  Pesan penginapan <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/registrasi-lob"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-background/40 text-background hover:bg-background/10 transition-colors"
+                >
+                  Registrasi LOB
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start lg:items-end gap-3 shrink-0">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-background/60 font-semibold lg:text-right">
+                Didukung &amp; Dikembangkan Bersama:
+              </span>
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-white hover:scale-110 transition-transform duration-300 shadow-md border border-white/20">
+                  <img
+                    src={ekowisataLogo}
+                    alt="Logo Ekowisata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-white hover:scale-110 transition-transform duration-300 shadow-md border border-white/20">
+                  <img
+                    src={nairadiveLogo}
+                    alt="Logo Naira Dive"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-white hover:scale-110 transition-transform duration-300 shadow-md border border-white/20">
+                  <img
+                    src={inspireLogo}
+                    alt="Logo Inspire"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,12 +110,11 @@ function Home() {
               Pulau kecil dengan nama besar dalam sejarah bangsa.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Dahulu dikenal sebagai <em>Rosengain</em> di peta-peta Belanda
-              abad ke-17, pulau ini diabadikan dengan nama Mohammad Hatta —
-              proklamator Republik Indonesia — yang menjalani masa
-              pengasingannya di Kepulauan Banda. Hari ini, Desa Rozengain
-              memelihara warisan itu lewat keramahan warganya, kebun pala
-              turun-temurun, dan laut yang menjaga sejarah di setiap karangnya.
+              Dahulu dikenal sebagai <em>Rosengain</em> di peta-peta Belanda abad ke-17, pulau ini
+              diabadikan dengan nama Mohammad Hatta — proklamator Republik Indonesia — yang
+              menjalani masa pengasingannya di Kepulauan Banda. Hari ini, Desa Rozengain memelihara
+              warisan itu lewat keramahan warganya, kebun pala turun-temurun, dan laut yang menjaga
+              sejarah di setiap karangnya.
             </p>
             <div className="mt-7 grid grid-cols-3 gap-4 text-sm">
               <Stat n="1936-1942" l="Tahun pengasingan" />
@@ -100,7 +132,14 @@ function Home() {
               className="rounded-2xl shadow-[var(--shadow-glow)] aspect-[4/3] object-cover"
             />
             <div className="absolute -bottom-6 -left-6 hidden sm:block w-40 h-40 rounded-2xl overflow-hidden border-4 border-background shadow-[var(--shadow-soft)]">
-              <img src={nutmeg} alt="Buah pala dengan fuli merah" loading="lazy" width={1024} height={1024} className="w-full h-full object-cover" />
+              <img
+                src={nutmeg}
+                alt="Buah pala dengan fuli merah"
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -110,11 +149,15 @@ function Home() {
       <section className="bg-secondary/40 border-y border-border">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-24">
           <div className="max-w-2xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Sorotan</span>
-            <h2 className="mt-3 font-display text-4xl lg:text-5xl">Empat pintu untuk mengenal Pulau Hatta.</h2>
+            <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+              Sorotan
+            </span>
+            <h2 className="mt-3 font-display text-4xl lg:text-5xl">
+              Empat pintu untuk mengenal Pulau Hatta.
+            </h2>
             <p className="mt-4 text-muted-foreground">
-              Semua layanan dikelola langsung oleh warga desa, dan pemesanan
-              dilakukan melalui satu kanal WhatsApp resmi.
+              Semua layanan dikelola langsung oleh warga desa, dan pemesanan dilakukan melalui satu
+              kanal WhatsApp resmi.
             </p>
           </div>
 
@@ -166,9 +209,9 @@ function Home() {
               Menuju Surga yang Tersembunyi
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Pulau Hatta (Desa Rozengain) terletak di ujung paling timur dari
-              Kepulauan Banda, Maluku Tengah. Letaknya yang terisolasi secara indah menjadikannya
-              salah satu destinasi selam dan relaksasi terbaik di dunia.
+              Pulau Hatta (Desa Rozengain) terletak di ujung paling timur dari Kepulauan Banda,
+              Maluku Tengah. Letaknya yang terisolasi secara indah menjadikannya salah satu
+              destinasi selam dan relaksasi terbaik di dunia.
             </p>
 
             <div className="mt-8 space-y-6">
@@ -191,7 +234,8 @@ function Home() {
                 <div>
                   <h4 className="font-semibold text-foreground">Transportasi Laut</h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Dapat ditempuh menggunakan perahu cepat (speed boat) umum atau sewaan dari pelabuhan Banda Neira dalam waktu sekitar 45-60 menit.
+                    Dapat ditempuh menggunakan perahu cepat (speed boat) umum atau sewaan dari
+                    pelabuhan Banda Neira dalam waktu sekitar 45-60 menit.
                   </p>
                 </div>
               </div>
@@ -272,7 +316,8 @@ function HighlightCard({
         <h3 className="mt-3 font-display text-2xl">{title}</h3>
         <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
         <div className="mt-5 inline-flex items-center gap-1.5 text-sm text-primary font-medium">
-          Lihat detail <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          Lihat detail{" "}
+          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </div>
       </div>
     </Link>

@@ -10,7 +10,7 @@ import {
 
 import { SiteLayout } from "@/components/SiteLayout";
 import appCss from "../styles.css?url";
-import logoImg from "../assets/kanari-logo.png";
+import logoImg from "../assets/kanari-logo.webp";
 
 function NotFoundComponent() {
   return (
@@ -75,9 +75,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Pulau Hatta — Desa Wisata Rozengain, Banda Neira" },
-      { name: "description", content: "Jelajahi jejak sejarah Bung Hatta, pesona bawah laut Banda, dan surga rempah pala di Desa Rozengain, Pulau Hatta." },
+      {
+        name: "description",
+        content:
+          "Jelajahi jejak sejarah Bung Hatta, pesona bawah laut Banda, dan surga rempah pala di Desa Rozengain, Pulau Hatta.",
+      },
       { property: "og:title", content: "Pulau Hatta — Desa Wisata Rozengain" },
-      { property: "og:description", content: "Sejarah, wisata bawah laut, dan hasil bumi pala di jantung Kepulauan Banda." },
+      {
+        property: "og:description",
+        content: "Sejarah, wisata bawah laut, dan hasil bumi pala di jantung Kepulauan Banda.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

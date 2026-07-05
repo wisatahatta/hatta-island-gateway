@@ -13,9 +13,9 @@ import {
   Instagram,
   Info,
 } from "lucide-react";
-import underwater from "@/assets/underwater.jpg";
-import fish from "@/assets/fish.jpg";
-import marineLogo from "@/assets/hatta-marine-logo.jpg";
+import underwater from "@/assets/underwater.webp";
+import fish from "@/assets/fish.webp";
+import marineLogo from "@/assets/hatta-marine-logo.webp";
 
 export const Route = createFileRoute("/hatta-marine-program")({
   head: () => ({
@@ -138,7 +138,9 @@ function Page() {
             "Kenali Lautnya. Ceritakan Kisahnya. Jaga Masa Depannya."
           </p>
           <p className="mt-5 max-w-2xl text-primary-foreground/85 text-base md:text-lg leading-relaxed">
-            Hatta Marine Program lahir dari keinginan sederhana: mengenal laut lebih dekat, mendokumentasikannya, dan membagikan pengetahuan itu kepada generasi berikutnya. Karena menjaga laut selalu dimulai dari mengenalnya.
+            Hatta Marine Program lahir dari keinginan sederhana: mengenal laut lebih dekat,
+            mendokumentasikannya, dan membagikan pengetahuan itu kepada generasi berikutnya. Karena
+            menjaga laut selalu dimulai dari mengenalnya.
           </p>
         </div>
       </section>
@@ -155,10 +157,13 @@ function Page() {
               Mengenal laut, mulai dari rumah sendiri.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Laut di sekitar Pulau Hatta itu luar biasa. Tapi semakin sedikit yang benar-benar mengenalnya. Padahal, kita lebih mungkin menjaga sesuatu yang kita pahami.
+              Laut di sekitar Pulau Hatta itu luar biasa. Tapi semakin sedikit yang benar-benar
+              mengenalnya. Padahal, kita lebih mungkin menjaga sesuatu yang kita pahami.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed font-medium text-foreground">
-              Karena itu, Hatta Marine Program hadir untuk membantu lebih banyak orang belajar, mengenal, dan terhubung dengan laut di sekitar mereka. Di pulau kecil yang dikelilingi laut luas ini, setiap ombak membawa cerita.
+              Karena itu, Hatta Marine Program hadir untuk membantu lebih banyak orang belajar,
+              mengenal, dan terhubung dengan laut di sekitar mereka. Di pulau kecil yang dikelilingi
+              laut luas ini, setiap ombak membawa cerita.
             </p>
             <blockquote className="mt-6 border-l-4 border-accent pl-4 italic text-muted-foreground">
               "Sedikit harapan untuk menyelamatkan laut."
@@ -179,10 +184,13 @@ function Page() {
         {/* Activities / What We Do Section */}
         <div className="mb-24">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Aktivitas Kami</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+              Aktivitas Kami
+            </span>
             <h2 className="mt-3 font-display text-3xl lg:text-4xl">Jadi, Kita Ngapain Aja?</h2>
             <p className="mt-4 text-muted-foreground">
-              Program kami berpusat pada edukasi kelautan praktis, pemantauan ekosistem terumbu karang, dan kolaborasi konservasi.
+              Program kami berpusat pada edukasi kelautan praktis, pemantauan ekosistem terumbu
+              karang, dan kolaborasi konservasi.
             </p>
           </div>
 
@@ -206,9 +214,13 @@ function Page() {
                 <div className="w-11 h-11 rounded-full bg-accent/30 text-accent-foreground grid place-items-center mb-5">
                   <Users className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl mb-2.5 text-accent-foreground font-semibold">Siapa yang Bisa Ikut?</h3>
+                <h3 className="font-display text-xl mb-2.5 text-accent-foreground font-semibold">
+                  Siapa yang Bisa Ikut?
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong>Siapa saja.</strong> Mulai dari anak-anak, pelajar, nelayan, pemuda desa, guru, peneliti, komunitas, hingga instansi pemerintah dan swasta. Kalau kamu peduli dengan laut, selalu ada ruang untuk terlibat.
+                  <strong>Siapa saja.</strong> Mulai dari anak-anak, pelajar, nelayan, pemuda desa,
+                  guru, peneliti, komunitas, hingga instansi pemerintah dan swasta. Kalau kamu
+                  peduli dengan laut, selalu ada ruang untuk terlibat.
                 </p>
               </div>
               <div className="mt-4 text-xs font-semibold uppercase tracking-wider text-accent">
@@ -223,7 +235,9 @@ function Page() {
           <Info className="w-8 h-8 text-accent mx-auto mb-4" />
           <h3 className="font-display text-2xl mb-3">Mimpi Kami Sederhana</h3>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Kami ingin lebih banyak orang mengenal lautnya sendiri. Karena laut bukan cuma tempat mencari nafkah atau destinasi wisata. Laut adalah rumah bagi ribuan kehidupan yang harus dijaga bersama.
+            Kami ingin lebih banyak orang mengenal lautnya sendiri. Karena laut bukan cuma tempat
+            mencari nafkah atau destinasi wisata. Laut adalah rumah bagi ribuan kehidupan yang harus
+            dijaga bersama.
           </p>
         </div>
 
@@ -274,7 +288,8 @@ function Page() {
             <div>
               <h2 className="font-display text-3xl lg:text-4xl">Mari Berkontribusi Bersama Kami</h2>
               <p className="mt-3 text-primary-foreground/85 max-w-2xl">
-                Hubungi kami untuk kolaborasi riset, program edukasi anak-anak, daur ulang sampah, atau pelatihan selam ilmiah Reef Check di Pulau Hatta.
+                Hubungi kami untuk kolaborasi riset, program edukasi anak-anak, daur ulang sampah,
+                atau pelatihan selam ilmiah Reef Check di Pulau Hatta.
               </p>
               <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/90">
                 <a
@@ -286,7 +301,6 @@ function Page() {
                   <Instagram className="w-4 h-4" />
                   <span>@hattamarineprogram</span>
                 </a>
-
               </div>
             </div>
             <div className="flex flex-col gap-3">

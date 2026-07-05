@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Anchor, Fish, HandCoins, ShieldCheck } from "lucide-react";
-import liveaboard from "@/assets/liveaboard.jpg";
+import liveaboard from "@/assets/liveaboard.webp";
 
 export const Route = createFileRoute("/registrasi-lob")({
   head: () => ({
     meta: [
       { title: "Registrasi Live on Board (LOB) — Pulau Hatta" },
-      { name: "description", content: "Tata tertib sandar, perlindungan terumbu karang, dan retribusi desa wisata untuk kapal live on board di Pulau Hatta." },
+      {
+        name: "description",
+        content:
+          "Tata tertib sandar, perlindungan terumbu karang, dan retribusi desa wisata untuk kapal live on board di Pulau Hatta.",
+      },
       { property: "og:image", content: liveaboard },
     ],
   }),
@@ -44,15 +48,23 @@ function Page() {
   return (
     <>
       <section className="relative overflow-hidden text-background">
-        <img src={liveaboard} alt="Kapal live on board berlabuh di Banda" width={1280} height={896} className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={liveaboard}
+          alt="Kapal live on board berlabuh di Banda"
+          width={1280}
+          height={896}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28">
           <span className="text-xs uppercase tracking-[0.2em] opacity-80">Live on Board</span>
-          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl">Registrasi & Informasi LOB</h1>
+          <h1 className="mt-3 font-display text-5xl lg:text-6xl max-w-3xl">
+            Registrasi & Informasi LOB
+          </h1>
           <p className="mt-5 max-w-2xl text-background/90">
-            Setiap kapal live on board yang singgah ke Pulau Hatta wajib mengikuti
-            tata tertib desa untuk menjaga kelestarian terumbu karang dan
-            keberlangsungan wisata bagi generasi berikutnya.
+            Setiap kapal live on board yang singgah ke Pulau Hatta wajib mengikuti tata tertib desa
+            untuk menjaga kelestarian terumbu karang dan keberlangsungan wisata bagi generasi
+            berikutnya.
           </p>
         </div>
       </section>
@@ -60,7 +72,10 @@ function Page() {
       <section className="mx-auto max-w-6xl px-5 lg:px-8 py-16 lg:py-20">
         <div className="grid md:grid-cols-2 gap-6">
           {rules.map((r) => (
-            <div key={r.title} className="rounded-2xl bg-card border border-border p-7 shadow-[var(--shadow-soft)]">
+            <div
+              key={r.title}
+              className="rounded-2xl bg-card border border-border p-7 shadow-[var(--shadow-soft)]"
+            >
               <div className="w-11 h-11 rounded-full bg-accent/20 text-primary grid place-items-center">
                 {r.icon}
               </div>
@@ -75,9 +90,8 @@ function Page() {
             <div>
               <h2 className="font-display text-3xl lg:text-4xl">Daftarkan kedatangan kapal Anda</h2>
               <p className="mt-3 text-primary-foreground/85 max-w-2xl">
-                Hubungi admin / Syahbandar desa melalui WhatsApp dengan
-                menyertakan nama kapal, jumlah tamu & kru, tanggal kedatangan,
-                dan rencana aktivitas selama di Pulau Hatta.
+                Hubungi admin / Syahbandar desa melalui WhatsApp dengan menyertakan nama kapal,
+                jumlah tamu & kru, tanggal kedatangan, dan rencana aktivitas selama di Pulau Hatta.
               </p>
             </div>
             <WhatsAppButton

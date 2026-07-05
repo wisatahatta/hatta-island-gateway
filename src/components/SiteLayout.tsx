@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { Menu, X, Instagram, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import logoImg from "../assets/kanari-logo.png";
+import logoImg from "../assets/kanari-logo.webp";
 
 const nav = [
   { to: "/", label: "Beranda" },
@@ -27,7 +27,9 @@ export function SiteLayout() {
             />
             <div className="leading-tight">
               <div className="font-display text-lg font-semibold">Pulau Hatta</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Desa Rozengain</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                Desa Rozengain
+              </div>
             </div>
           </Link>
 
@@ -38,8 +40,11 @@ export function SiteLayout() {
                 <Link
                   key={n.to}
                   to={n.to}
-                  className={`px-3 py-2 text-sm rounded-md transition-colors ${active ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"
-                    }`}
+                  className={`px-3 py-2 text-sm rounded-md transition-colors ${
+                    active
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {n.label}
                 </Link>
@@ -63,8 +68,9 @@ export function SiteLayout() {
                   key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className={`py-2 text-sm ${pathname === n.to ? "text-primary font-semibold" : "text-foreground"
-                    }`}
+                  className={`py-2 text-sm ${
+                    pathname === n.to ? "text-primary font-semibold" : "text-foreground"
+                  }`}
                 >
                   {n.label}
                 </Link>
@@ -89,12 +95,14 @@ export function SiteLayout() {
               />
               <div className="leading-tight">
                 <div className="font-display text-lg font-semibold">Pulau Hatta</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Desa Rozengain</div>
+                <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  Desa Rozengain
+                </div>
               </div>
             </div>
             <p className="text-muted-foreground">
-              Desa Rozengain — Banda Neira, Maluku Tengah. Jejak sejarah, surga
-              bawah laut, dan rumah sang rempah.
+              Desa Rozengain — Banda Neira, Maluku Tengah. Jejak sejarah, surga bawah laut, dan
+              rumah sang rempah.
             </p>
           </div>
           <div>
@@ -132,7 +140,9 @@ export function SiteLayout() {
           </div>
         </div>
         <div className="border-t border-border py-6 text-center text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-center gap-2">
-          <span>© {new Date().getFullYear()} Desa Wisata Rozengain — Pulau Hatta. Semua hak dilindungi.</span>
+          <span>
+            © {new Date().getFullYear()} Desa Wisata Rozengain — Pulau Hatta. Semua hak dilindungi.
+          </span>
           <span className="hidden sm:inline opacity-50">·</span>
           <span>
             Didukung oleh{" "}

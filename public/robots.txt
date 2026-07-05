@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hatta-island-gateway.pages.dev/sitemap.xml
+Sitemap: https://hattaisland.web.id/sitemap.xml
